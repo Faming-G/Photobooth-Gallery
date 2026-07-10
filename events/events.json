@@ -1,0 +1,36 @@
+{
+    "events": [
+        {
+            "name": "CFD Juli 1",
+            "slug": "cfd-juli-1",
+            "date": "1992-12-12",
+            "location": "Mandala",
+            "cover": null,
+            "photos": 0
+        },
+        {
+            "name": "CFD Juli 2",
+            "slug": "cfd-juli-2",
+            "date": "1992-12-13",
+            "location": "Maguwo",
+            "cover": null,
+            "photos": 0
+        },
+        {
+            "name": "Coba 1",
+            "slug": "coba-1",
+            "date": "1992-12-11",
+            "location": "1",
+            "cover": null,
+            "photos": 0
+        },
+        {
+            "name": "Test Event",
+            "slug": "test-event",
+            "date": "1999-11-12",
+            "location": "Test",
+            "cover": null,
+            "photos": 0
+        }
+    ]
+}
