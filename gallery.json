@@ -1,0 +1,17 @@
+{
+    "event": "CFD 1",
+    "photos": [
+        {
+            "url": "https://picsum.photos/800/600",
+            "name": "Foto 1"
+        },
+        {
+            "url": "https://picsum.photos/801/600",
+            "name": "Foto 2"
+        },
+        {
+            "url": "https://res.cloudinary.com/j2nnprg9/image/upload/v1783669351/CFD%201/kd29kpqwqy0onndgqh3s.png",
+            "name": "jepreto-hd-1783592860924.png"
+        }
+    ]
+}
