@@ -21,6 +21,11 @@
             "url": "https://res.cloudinary.com/j2nnprg9/image/upload/v1789480042/cfd-ssa-13-september-2026/animated/scaztptcmh2wi4jz9idy.png",
             "name": "test animated.jpg",
             "type": "animated"
+        },
+        {
+            "url": "https://res.cloudinary.com/j2nnprg9/video/upload/v1789480094/cfd-ssa-13-september-2026/animated/igteibttozchk8wqqkn6.mp4",
+            "name": "test animated 2.mp4",
+            "type": "animated"
         }
     ]
 }
