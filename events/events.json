@@ -39,6 +39,14 @@
             "location": "SSA",
             "cover": "https://res.cloudinary.com/j2nnprg9/image/upload/v1789479418/cfd-ssa-13-september-2026/wr4smhbaiq06svrajc68.jpg",
             "photos": 5
+        },
+        {
+            "name": "CFD SSA 20 SEPTEMBER 2026",
+            "slug": "cfd-ssa-20-september-2026",
+            "date": "2026-09-20",
+            "location": "SSA",
+            "cover": null,
+            "photos": 0
         }
     ]
 }

@@ -1,32 +1,65 @@
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta charset="UTF-8">
+    <title>Photobooth Gallery</title>
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Photobooth Gallery</title>
-
-<link rel="stylesheet" href="assets/style.css">
-
+    <link rel="stylesheet" href="assets/home.css">
 </head>
 
 <body>
 
-<div class="container">
+    <header class="hero">
+        <div class="hero-content">
+            <p class="eyebrow">PHOTOBOOTH</p>
 
-<h1>📸 Photobooth Gallery</h1>
+            <h1>Gallery</h1>
 
-<p>Pilih event untuk melihat hasil foto.</p>
+            <p class="subtitle">
+                Temukan dan lihat kembali momen dari setiap event.
+            </p>
 
-<div id="events"></div>
+            <div class="search-box">
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Cari event..."
+                    autocomplete="off"
+                >
+            </div>
+        </div>
+    </header>
 
-</div>
 
-<script src="assets/home.js"></script>
+    <main class="container">
+
+        <div class="section-header">
+            <div>
+                <p class="section-label">COLLECTION</p>
+                <h2>Semua Event</h2>
+            </div>
+
+            <span id="eventCount"></span>
+        </div>
+
+
+        <div id="eventsGrid" class="events-grid">
+            <div class="loading">
+                Memuat event...
+            </div>
+        </div>
+
+    </main>
+
+
+    <footer>
+        <p>Photobooth Gallery</p>
+    </footer>
+
+
+    <script src="assets/home.js"></script>
 
 </body>
-
 </html>
