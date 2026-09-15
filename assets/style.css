@@ -1,61 +1,324 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+* {
+    box-sizing: border-box;
 }
 
-body{
 
-font-family:Arial,Helvetica,sans-serif;
-background:#f5f5f5;
-padding:30px;
+body {
 
-}
+    margin: 0;
 
-header{
+    padding: 30px 20px;
 
-text-align:center;
-margin-bottom:30px;
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
 
-}
+    background: #f5f5f5;
 
-#gallery{
-
-display:grid;
-grid-template-columns:repeat(auto-fill,minmax(250px,1fr));
-gap:20px;
+    color: #222;
 
 }
 
-.card{
 
-background:white;
-border-radius:12px;
-overflow:hidden;
-box-shadow:0 8px 20px rgba(0,0,0,.15);
+h1 {
 
-}
+    text-align: center;
 
-.card img{
-
-width:100%;
-display:block;
+    margin-bottom: 8px;
 
 }
 
-.card a{
 
-display:block;
-padding:15px;
-background:#0a84ff;
-color:white;
-text-decoration:none;
-text-align:center;
+p {
+
+    text-align: center;
+
+    color: #666;
 
 }
 
-.card a:hover{
 
-background:#0068d8;
+/* =========================
+   FILTER
+========================= */
+
+.gallery-filters {
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin: 30px auto;
+
+}
+
+
+.filter-button {
+
+    border: 1px solid #222;
+
+    background: white;
+
+    color: #222;
+
+    padding: 10px 18px;
+
+    border-radius: 999px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+    transition: 0.2s;
+
+}
+
+
+.filter-button:hover {
+
+    transform: translateY(-2px);
+
+}
+
+
+.filter-button.active {
+
+    background: #222;
+
+    color: white;
+
+}
+
+
+/* =========================
+   GALLERY
+========================= */
+
+#gallery {
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fill, minmax(250px, 1fr));
+
+    gap: 18px;
+
+}
+
+
+/* =========================
+   MEDIA CARD
+========================= */
+
+.media-card {
+
+    position: relative;
+
+    background: white;
+
+    border-radius: 14px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 4px 18px rgba(0, 0, 0, 0.08);
+
+}
+
+
+.media-content {
+
+    display: block;
+
+    width: 100%;
+
+    height: 320px;
+
+    object-fit: cover;
+
+    background: #111;
+
+}
+
+
+.media-card img {
+
+    cursor: pointer;
+
+    transition: transform 0.25s;
+
+}
+
+
+.media-card img:hover {
+
+    transform: scale(1.03);
+
+}
+
+
+/* =========================
+   BADGE
+========================= */
+
+.media-badge {
+
+    position: absolute;
+
+    top: 12px;
+
+    left: 12px;
+
+    padding: 6px 10px;
+
+    border-radius: 999px;
+
+    background: rgba(0, 0, 0, 0.7);
+
+    color: white;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+}
+
+
+/* =========================
+   EMPTY
+========================= */
+
+.empty-gallery {
+
+    grid-column: 1 / -1;
+
+    text-align: center;
+
+    padding: 60px 20px;
+
+    color: #777;
+
+}
+
+
+/* =========================
+   LIGHTBOX
+========================= */
+
+.lightbox {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 9999;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 20px;
+
+    background:
+        rgba(0, 0, 0, 0.9);
+
+}
+
+
+.lightbox-content {
+
+    position: relative;
+
+    max-width: 95vw;
+
+    max-height: 95vh;
+
+}
+
+
+.lightbox-media {
+
+    display: block;
+
+    max-width: 95vw;
+
+    max-height: 90vh;
+
+    object-fit: contain;
+
+    border-radius: 8px;
+
+}
+
+
+.lightbox-close {
+
+    position: absolute;
+
+    top: -45px;
+
+    right: 0;
+
+    border: none;
+
+    background: transparent;
+
+    color: white;
+
+    font-size: 40px;
+
+    cursor: pointer;
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    body {
+
+        padding: 20px 12px;
+
+    }
+
+
+    #gallery {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 10px;
+
+    }
+
+
+    .media-content {
+
+        height: 230px;
+
+    }
+
+
+    .filter-button {
+
+        padding: 8px 13px;
+
+        font-size: 12px;
+
+    }
 
 }
