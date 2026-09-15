@@ -1,36 +1,119 @@
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
-
-<meta charset="UTF-8">
-
-<meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
->
-
-<title>CFD SSA 13 SEPTEMBER 2026</title>
-
-<link
-    rel="stylesheet"
-    href="../../assets/style.css"
->
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kebooth Event Gallery</title>
+  <meta name="description" content="Official Event Media Gallery by Kebooth.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/style.css">
 </head>
-
 <body>
 
-<h1>CFD SSA 13 SEPTEMBER 2026</h1>
+  <header class="gallery-nav">
+    <div class="container gallery-nav-inner">
+      <div class="nav-brand-group">
+        <a href="../../" class="brand-logo-link" aria-label="Kembali ke Beranda">
+          <img src="../../assets/logo.png" alt="Kebooth Logo">
+        </a>
+        <a href="../../" class="back-home-btn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+          <span>Semua Event</span>
+        </a>
+      </div>
+      <div class="nav-action-group">
+        <button class="btn-action-outline" id="btnEventQR">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+          <span>QR Event</span>
+        </button>
+        <button class="btn-action-outline" id="btnShareEvent">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+          <span>Share</span>
+        </button>
+      </div>
+    </div>
+  </header>
 
-<p>2026-09-13</p>
+  <main class="container">
+    <section class="event-header">
+      <div class="event-header-inner">
+        <div class="event-title-area">
+          <h1 id="eventTitle">Memuat Nama Event...</h1>
+          <div class="event-header-meta">
+            <span class="meta-item">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              <span id="eventDate">Memuat tanggal...</span>
+            </span>
+            <span class="meta-item">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span id="eventLocation">Memuat lokasi...</span>
+            </span>
+          </div>
+        </div>
+        <div class="media-summary-badge" id="mediaCountBadge">
+          0 Media
+        </div>
+      </div>
+    </section>
 
-<p>SSA</p>
+    <div class="filter-tabs" id="filterTabs">
+      <button class="filter-btn active" data-filter="all">Semua Media</button>
+      <button class="filter-btn" data-filter="prints">Prints</button>
+      <button class="filter-btn" data-filter="originals">Originals</button>
+      <button class="filter-btn" data-filter="animated">Animated</button>
+    </div>
 
-<div id="gallery"></div>
+    <div class="gallery-grid" id="galleryGrid"></div>
+  </main>
 
-<script src="../../assets/script.js"></script>
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
+    <div class="lightbox-topbar">
+      <span class="lightbox-counter" id="lightboxCounter">0 / 0</span>
+      <div class="lightbox-actions">
+        <button class="lightbox-btn" id="btnLightboxDownload" title="Buka File Original" aria-label="Unduh">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        </button>
+        <button class="lightbox-btn" id="btnLightboxClose" title="Tutup (Esc)" aria-label="Tutup">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+    <div class="lightbox-body">
+      <button class="lightbox-nav-btn prev" id="btnLightboxPrev" aria-label="Media Sebelumnya">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <div class="lightbox-media-container" id="lightboxMedia"></div>
+      <button class="lightbox-nav-btn next" id="btnLightboxNext" aria-label="Media Selanjutnya">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+  </div>
 
+  <!-- QR MODAL -->
+  <div class="modal-overlay" id="qrModal" role="dialog" aria-modal="true">
+    <div class="modal-dialog">
+      <button class="modal-close" id="btnCloseQR" aria-label="Tutup Modal QR">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <h3 id="qrModalTitle" style="font-size: 1.25rem; font-family: var(--font-heading); margin-bottom: 6px;">Event QR</h3>
+      <p style="font-size: 0.88rem; color: var(--text-muted);">Scan QR Code ini untuk membuka galeri langsung di smartphone Anda.</p>
+      <div class="qr-code-view">
+        <img id="qrImage" src="qr.png" alt="QR Code Galeri Event">
+      </div>
+      <div>
+        <a id="btnDownloadQR" href="qr.png" download class="btn-action-outline" style="display: inline-flex;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          <span>Unduh Gambar QR</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast-msg" id="toastNotification">Link berhasil disalin</div>
+
+  <script src="../../assets/script.js"></script>
 </body>
-
 </html>
