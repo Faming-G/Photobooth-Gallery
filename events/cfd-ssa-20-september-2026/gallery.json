@@ -2,5 +2,26 @@
     "event": "CFD SSA 20 SEPTEMBER 2026",
     "date": "2026-09-20",
     "location": "SSA",
-    "photos": []
+    "photos": [
+        {
+            "url": "https://res.cloudinary.com/j2nnprg9/image/upload/v1789482157/cfd-ssa-20-september-2026/originals/ay1mnbbnune6bf5roeqs.jpg",
+            "name": "test original 2.JPG",
+            "type": "originals"
+        },
+        {
+            "url": "https://res.cloudinary.com/j2nnprg9/image/upload/v1789482164/cfd-ssa-20-september-2026/prints/pdvyxtqlhc47aomhnr7h.jpg",
+            "name": "test print.JPG",
+            "type": "prints"
+        },
+        {
+            "url": "https://res.cloudinary.com/j2nnprg9/video/upload/v1789482188/cfd-ssa-20-september-2026/animated/ugfirtltx3azn9ujfoes.mp4",
+            "name": "tests animated 2.mp4",
+            "type": "animated"
+        },
+        {
+            "url": "https://res.cloudinary.com/j2nnprg9/image/upload/v1789482554/cfd-ssa-20-september-2026/prints/jpab1j3htmtd933vpjlv.jpg",
+            "name": "test print 3.JPG",
+            "type": "prints"
+        }
+    ]
 }
